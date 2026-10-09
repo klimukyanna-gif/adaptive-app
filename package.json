@@ -1,0 +1,14 @@
+{
+  "name": "adaptive-app",
+  "version": "1.0.0",
+  "description": "Учебное адаптивное приложение «Жумайсымба»",
+  "main": "cow.js",
+  "scripts": {
+    "start": "node cow.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cowsay": "^1.6.0"
+  }
+}

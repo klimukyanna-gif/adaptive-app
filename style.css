@@ -1,0 +1,221 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: "Jost", Arial, sans-serif;
+  color: #222;
+  background: #fff;
+  padding-bottom: 20px;
+}
+img { max-width: 100%; }
+.hidden { display: none !important; }
+
+
+
+
+
+.header { text-align: center; padding: 16px 20px 8px; }
+.logo { font-family: "Ruslan Display", Georgia, serif; font-size: 30px; }
+.app-name { font-size: 13px; color: #777; margin-bottom: 8px; }
+.menu { display: flex; justify-content: center; gap: 24px; }
+.menu-btn {
+  background: none; border: none; cursor: pointer;
+  font-family: inherit; font-size: 15px; font-weight: 600; letter-spacing: 1px;
+  padding: 6px 4px; border-bottom: 2px solid transparent;
+}
+.menu-btn.active { border-bottom-color: #333; }
+.badge {
+  display: inline-block; min-width: 20px; padding: 0 6px;
+  background: #a9c4ea; border-radius: 10px; font-size: 12px;
+}
+
+
+
+
+
+.main { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+.section-title { font-size: 26px; margin: 24px 0 12px; }
+.dark-btn, .light-btn, .ai-btn, .card-btn {
+  font-family: inherit; cursor: pointer; border-radius: 22px; padding: 10px 20px; font-size: 15px;
+}
+.dark-btn { background: #333; color: #fff; border: 2px solid #333; }
+.light-btn { background: #fff; color: #333; border: 2px solid #333; }
+
+
+
+
+
+.banner {
+  height: 300px; border-radius: 24px; padding: 30px;
+  background: url("images/banner.jpg") center / cover;
+}
+.banner h1 { color: #fff; font-size: 52px; font-weight: 500; letter-spacing: 3px; }
+
+
+
+
+
+.ai-block {
+  display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap;
+  background: #a9c4ea; border: 2px dashed #333; border-radius: 20px;
+  padding: 16px 24px; margin: 20px 0;
+}
+.ai-btn { background: #333; color: #fff; border: none; font-size: 17px; font-weight: 600; padding: 14px 26px; }
+
+
+
+
+.chips { display: flex; flex-wrap: wrap; gap: 12px; }
+.chip {
+  display: flex; align-items: center; justify-content: space-between; gap: 10px;
+  flex: 1; min-width: 150px; padding: 4px 6px 4px 16px;
+  border: 1.5px solid #333; border-radius: 22px; background: #fff;
+  font-family: inherit; font-size: 14px; cursor: pointer;
+}
+.chip img { width: 30px; height: 30px; border-radius: 50%; object-fit: cover; }
+.chip.active { background: #333; color: #fff; }
+
+
+
+
+
+.group-title { font-size: 20px; font-weight: 700; margin-top: 26px; padding-bottom: 4px; border-bottom: 1px solid #333; }
+.group-brand { font-size: 13px; color: #555; margin: 4px 0 12px; }
+.cards { display: flex; flex-wrap: wrap; gap: 20px; }
+.card {
+  width: calc(25% - 15px);             
+  text-align: center; padding: 10px;
+  display: flex; flex-direction: column; align-items: center;
+}
+.card img { height: 150px; object-fit: contain; margin-bottom: 8px; }
+.card .price { font-weight: 700; font-size: 14px; }
+.card .name { font-size: 13px; margin: 6px 0 10px; flex: 1; }
+.card-buttons { display: flex; gap: 6px; flex-wrap: wrap; justify-content: center; }
+.card-btn { font-size: 13px; padding: 6px 12px; background: #fff; border: 1.5px solid #333; }
+.card-btn.buy { background: #333; color: #fff; }
+
+
+
+
+
+
+
+.reviews { display: flex; gap: 16px; flex-wrap: wrap; }
+.review { flex: 1; min-width: 260px; border: 1.5px solid #333; border-radius: 22px; padding: 16px; }
+.review span { float: right; font-size: 12px; color: #777; }
+.review p { font-size: 13px; margin-top: 8px; }
+
+
+
+
+
+
+.chat {
+  height: 340px; overflow-y: auto; border: 1.5px solid #333; border-radius: 20px;
+  padding: 14px; display: flex; flex-direction: column; gap: 10px;
+}
+.msg { max-width: 85%; padding: 10px 14px; border-radius: 16px; font-size: 14px; }
+.msg.bot { background: #a9c4ea; align-self: flex-start; }
+.msg.user { background: #333; color: #fff; align-self: flex-end; }
+.mini { display: flex; align-items: center; gap: 8px; background: #fff; border-radius: 12px; padding: 6px; margin-top: 8px; }
+.mini img { height: 44px; }
+.mini span { flex: 1; font-size: 12px; }
+.quick { display: flex; flex-wrap: wrap; gap: 8px; margin: 12px 0; }
+.quick-btn { font-family: inherit; padding: 6px 12px; border: 1.5px solid #333; border-radius: 16px; background: #fff; cursor: pointer; }
+.chat-form { display: flex; gap: 8px; }
+.chat-form input, .profile-form input, .profile-form select {
+  flex: 1; width: 100%; padding: 10px 14px; font-family: inherit; font-size: 15px;
+  border: 1.5px solid #333; border-radius: 20px; margin-bottom: 8px;
+}
+.hint { font-size: 12px; color: #777; margin-top: 8px; }
+
+
+
+
+
+
+.cart-row { display: flex; align-items: center; gap: 12px; border-bottom: 1px solid #ddd; padding: 10px 0; }
+.cart-row img { height: 60px; }
+.cart-row .info { flex: 1; font-size: 14px; }
+.qty-btn { width: 30px; height: 30px; border-radius: 50%; border: 1.5px solid #333; background: #fff; cursor: pointer; font-size: 16px; }
+.cart-total { margin-top: 16px; display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.cart-total p { flex: 1; font-size: 20px; }
+.empty { color: #777; padding: 16px 0; }
+
+
+
+
+
+.profile-box { display: flex; gap: 24px; align-items: flex-start; margin-bottom: 20px; }
+.avatar {
+  width: 90px; height: 90px; border-radius: 50%; background: #333; color: #fff;
+  display: flex; align-items: center; justify-content: center; font-size: 38px; flex-shrink: 0;
+}
+.profile-form { flex: 1; max-width: 420px; }
+.profile-form label { font-size: 13px; }
+.order { border: 1.5px dashed #333; border-radius: 16px; padding: 10px 14px; margin-top: 8px; font-size: 14px; }
+
+
+
+
+
+.modal { position: fixed; inset: 0; background: rgba(0,0,0,.55); display: flex; align-items: center; justify-content: center; padding: 16px; z-index: 10; }
+.modal-box { position: relative; background: #333; color: #fff; border-radius: 24px; padding: 24px; max-width: 520px; width: 100%; text-align: center; }
+.modal-box img { background: #fff; border-radius: 20px; height: 190px; padding: 8px; margin-bottom: 12px; }
+.modal-box h3 { margin-bottom: 6px; }
+.modal-box .price { color: #a9c4ea; font-size: 22px; font-weight: 700; margin: 8px 0; }
+.modal-box p { font-size: 14px; margin-bottom: 8px; }
+.close { position: absolute; top: 12px; right: 14px; background: none; border: none; color: #fff; font-size: 20px; cursor: pointer; }
+
+
+
+
+.footer {
+  display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap;
+  background: #333; color: #fff; border-radius: 24px;
+  max-width: 1160px; margin: 30px auto 0; padding: 24px 30px; font-size: 13px;
+}
+.footer p { font-size: 11px; margin-bottom: 10px; }
+.footer-right { text-align: right; }
+.footer-logo { font-family: "Ruslan Display", Georgia, serif; font-size: 24px; }
+
+
+
+
+
+
+@media (max-width: 900px) {
+  .card { width: calc(50% - 10px); }          /* 2 колонки */
+  .banner h1 { font-size: 40px; }
+  .footer { margin: 30px 20px 0; }
+}
+
+
+
+
+
+
+/* ================= СМАРТФОН ================= */
+@media (max-width: 600px) {
+  .header { padding-bottom: 0; }
+  .logo { font-size: 24px; }
+  .app-name { display: none; }
+
+
+  
+  .menu {
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 5;
+    background: #333; gap: 0; justify-content: space-around; padding: 4px 0;
+  }
+  .menu-btn { color: #fff; font-size: 12px; letter-spacing: 0; }
+  .menu-btn.active { border-bottom-color: #a9c4ea; }
+  body { padding-bottom: 60px; }
+
+  .banner { height: 200px; padding: 20px; }
+  .banner h1 { font-size: 30px; }
+  .card { width: 100%; }                      /* 1 колонка: карточки друг под другом */
+  .chip { min-width: 45%; }
+  .ai-block { flex-direction: column; text-align: center; }
+  .profile-box { flex-direction: column; align-items: center; }
+  .footer { flex-direction: column; text-align: center; }
+  .footer-right { text-align: center; }
+}

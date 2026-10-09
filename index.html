@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Жумайсымба — магазин ухода за волосами</title>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&family=Ruslan+Display&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+  <header class="header">
+    <div class="logo"> JYMASIMBA</div>
+    <p class="app-name">Жумайсымба</p>
+    <nav class="menu">
+      <button class="menu-btn active" data-page="catalog">Каталог</button>
+      <button class="menu-btn" data-page="ai">ИИ-помощник</button>
+      <button class="menu-btn" data-page="cart">Корзина <span id="cart-count" class="badge">0</span></button>
+      <button class="menu-btn" data-page="profile">Профиль</button>
+    </nav>
+  </header>
+
+  <main class="main">
+
+    
+
+    <section class="page" id="page-catalog">
+      <div class="banner">
+        <h1>GREEEN<br>COSMETIK</h1>
+      </div>
+
+      <div class="ai-block">
+        <div>
+          <h2>Не знаете, что выбрать?</h2>
+          <p>ИИ-помощник подберёт уход, добавит товары в корзину и оформит заказ.</p>
+        </div>
+        <button class="ai-btn" id="open-ai">Подобрать уход с ИИ</button>
+      </div>
+
+      <div class="chips" id="chips">
+        <button class="chip active" data-cat="all"><img src="images/chip1.png" alt="">Всё</button>
+        <button class="chip" data-cat="shampoo"><img src="images/chip2.png" alt="">Очищение</button>
+        <button class="chip" data-cat="care"><img src="images/chip3.png" alt="">Уход</button>
+        <button class="chip" data-cat="repair"><img src="images/chip4.png" alt="">Восстановление</button>
+        <button class="chip" data-cat="style"><img src="images/chip1.png" alt="">Стайлинг</button>
+      </div>
+
+      <div id="catalog-list"></div>
+
+      <h2 class="section-title">Отзывы</h2>
+      <div class="reviews">
+        <div class="review">
+          <b>Мария</b> <span>sofia.kk@gmail.com</span>
+          <p>Волосы стали заметно объёмнее! После мытья они лёгкие, мягкие и красиво блестят. Очень понравился результат, обязательно возьму ещё.</p>
+        </div>
+        <div class="review">
+          <b>Анна</b> <span>mikova@gmail.com</span>
+          <p>Приятно удивлена качеством. Хорошо очищает кожу головы, волосы после мытья мягкие и блестящие. Для ежедневного ухода подошёл отлично.</p>
+        </div>
+      </div>
+    </section>
+
+    
+
+    <section class="page hidden" id="page-ai">
+      <h2 class="section-title">ИИ-помощник</h2>
+      <div class="chat" id="chat"></div>
+      <div class="quick">
+        <button class="quick-btn">Сухие волосы</button>
+        <button class="quick-btn">Хочу объём</button>
+        <button class="quick-btn">Окрашенные волосы</button>
+        <button class="quick-btn">Для укладки</button>
+        <button class="quick-btn">Покажи корзину</button>
+      </div>
+      <div class="chat-form">
+        <input type="text" id="chat-input" placeholder="Напишите запрос, например: сухие волосы">
+        <button class="dark-btn" id="chat-send">Отправить</button>
+      </div>
+      <p class="hint">Это учебная имитация ИИ: ответы подбираются по ключевым словам. Команды: «добавь в корзину», «покажи корзину», «оформи заказ».</p>
+    </section>
+
+    
+
+
+    <section class="page hidden" id="page-cart">
+      <h2 class="section-title">Корзина</h2>
+      <div id="cart-list"></div>
+      <div class="cart-total">
+        <p>Итого: <b id="cart-sum">0,00</b> руб.</p>
+        <button class="dark-btn" id="order-btn">Оформить заказ</button>
+        <button class="light-btn" id="clear-btn">Очистить</button>
+      </div>
+    </section>
+
+    
+
+
+    <section class="page hidden" id="page-profile">
+      <h2 class="section-title">Профиль</h2>
+      <div class="profile-box">
+        <div class="avatar" id="avatar">?</div>
+        <div class="profile-form">
+          <label>Имя</label>
+          <input type="text" id="p-name" placeholder="Ваше имя">
+          <label>Эл. почта</label>
+          <input type="text" id="p-email" placeholder="name@mail.com">
+          <label>Тип волос</label>
+          <select id="p-hair">
+            <option>Не указан</option>
+            <option>Сухие</option>
+            <option>Жирные</option>
+            <option>Окрашенные</option>
+            <option>Тонкие</option>
+          </select>
+          <button class="dark-btn" id="save-profile">Сохранить</button>
+          <p id="profile-msg" class="hint"></p>
+        </div>
+      </div>
+      <h3>История заказов</h3>
+      <div id="orders-list"></div>
+    </section>
+
+  </main>
+
+  
+
+  <div class="modal hidden" id="modal">
+    <div class="modal-box">
+      <button class="close" id="modal-close">✕</button>
+      <div id="modal-content"></div>
+    </div>
+  </div>
+
+  
+  
+  <footer class="footer">
+    <div>
+      <b>Режим работы</b>
+      <p>Пн-Пт с 10:00 - 18:00<br>Сб-Вс - выходной</p>
+      <b>Горячая линия</b>
+      <p>+375 (29) 756 88 87</p>
+    </div>
+    <div class="footer-logo"> JYMASIMBA</div>
+    <div class="footer-right">
+      <b>Электронный адрес</b>
+      <p>nif.nif@jymasimba.schop</p>
+      <b>Расположение</b>
+      <p>ул. Площадь Свободы, 27А, 1 этаж</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
